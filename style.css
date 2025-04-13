@@ -1,0 +1,741 @@
+body{
+    background-color: black;
+  
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav img{
+    position: relative;
+    height: 5.5vh;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    
+
+}
+
+
+
+  
+
+:root{
+    --main-font-family: 'Helvetica Neue', Arial, sans-serif;
+  --main-font-weight: 400;
+}
+
+.login {
+    position: absolute;
+    top: 3.5vh;
+    right: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5vh;
+    width: 50px;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 4px 9px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 999;
+  }
+  
+  .login:hover {
+    transform: scale(1.05);
+    color: white;
+    background-color: rgb(5, 5, 5);
+    border: none;
+    z-index: 999;
+  }
+  
+
+.drop{
+    padding: 0;
+    margin: 0;
+    height: 3vh;
+    display: flex;
+}
+
+.sign{
+    margin-top: 0vh;
+    height: 2.5vh;
+    margin-left: 0vw;
+}  
+
+
+
+.lang {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;  /* Adjust spacing dynamically */
+    
+    position: absolute;
+    top: 3.5vh;
+    right: 8rem; /* Moves it dynamically */
+    
+    color: white;
+    border: 1px solid grey;
+
+    border-radius: 20px;
+    
+    height: 3.5vh;
+    width: 7vw;
+    padding: 5px 10px; /* Better spacing */
+}
+
+
+
+.backg{
+    position: absolute;
+    width: 99vw;
+    height: 280vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+}
+
+ .backg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px); /* Apply blur only to this layer */
+    z-index: -1; /* Ensures it's behind all other content */
+    opacity: 0.1;
+}
+
+
+main{
+    position: relative;
+    display: flex;
+    top: 2vh;
+    background-image: url(assets/bg.jpg);
+    border-radius: 30px;
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.5);
+    height: auto;
+    width: 94vw;
+    margin: auto;
+    mask: radial-gradient( 49% 30px at bottom,rgb(0 0 0/0%) 95%,rgb(0 0 0/100%));
+}
+
+
+
+
+
+main .box{
+    position: relative;
+    height: 80vh;
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.5);
+    border: 2px solid rgba(69, 68, 68, 0.475);
+    border-radius: 30px;
+
+}
+    .s1{
+        position: absolute;
+        display: flex;
+        justify-content: center;  /* Centers text horizontally */
+        align-items: center;  /* Centers text vertically */
+        text-align: center;
+        top: 42%;
+        left: 50.5%;
+        transform: translate(-50%, -50%); /* Perfect centering */
+        height: auto;
+        width: 60vw;
+        color: white;
+        font-family: var(--main-font-family);
+        font-size: clamp(2rem, 3.5vw, 4.5rem);
+        font-weight: 800;
+        padding: 10px;
+    }
+    
+    
+    
+    
+    .s2{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        top: 61%;
+        left: 49%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: 40vw;
+        color: white;
+        font-family: var(--main-font-family);
+        font-size: clamp(1rem , 1.5vw, 3rem);
+        text-align: center;
+    }
+    .s3{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        top: 72%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: 70vw;
+        color: white;
+        font-family: var(--main-font-family);
+        font-size: clamp(1rem , 1.5vw, 3rem);
+        text-align: center;
+        
+    }
+    
+    
+    #signin {
+        position: relative;
+        display: flex;
+        font-size: large;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: rgba(0, 0, 0, 0.755);
+        border: 2px solid white;
+        border-radius: 30px;
+        color: white;
+          
+    }
+    
+    .form-container ::placeholder{
+        color: white;
+    }
+    
+    
+    #btn {
+        font-size: larger;
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        border-radius: 30px;
+        color: white;
+        border: 2px solid red;
+        background-color: red;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+          
+    }
+    
+   
+    
+    #btn:hover{
+        background: black !important;
+        transform: scale(1.05);
+    }
+    
+    #signin, #btn {
+        width: min(90%, 350px);
+        height: 50px;
+        max-height: 8vh;  /* Min 40px, adapts up to 6vh, max 60px */
+        left: 3vw;
+    }
+    #btn {
+        width: min(58%, 190px);
+        height: 50px;
+        max-height: 8vh;  /* Min 40px, adapts up to 6vh, max 60px */
+        cursor: pointer;
+    }
+    
+    .sec1{
+        display: flex;
+    }
+    
+    
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 100px;
+        max-width: 100%;
+        gap: 10px;
+        
+    }
+    
+    .form-container {
+        position: absolute;
+        bottom: 14%; /* Adjust this for spacing */
+        left: 48%;
+        transform: translateX(-50%); /* Centers it horizontally */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* Spacing between input & button */
+        width: 100%;
+    }
+    
+    .net{
+        display: none;
+        width: 18px;
+        height: auto;
+        margin-top: 23px;
+        margin-left: 22px;
+        margin-bottom: -15;
+        
+    }
+    
+    h2{
+        position: relative;
+        color: white;
+        font-family: var(--main-font-family);
+        font-weight: 700;
+        font-size: 30px;
+        margin-left: 20px ;
+        padding: 20px 50px;
+    }
+    
+    .cinema{
+        padding: 50px 50px;
+            
+    }
+    
+    .movies-list{
+        background-color: rgba(0, 0, 0, 0.354);
+        height: 60vh;   
+        justify-items: center;
+        align-items: center;
+        display: flex;
+        gap: 20px;
+        margin-top: -10vh;
+        overflow-x: auto;
+        padding-bottom: 50px;
+        white-space: nowrap;
+        scrollbar-width: none;
+        mask-image: linear-gradient(to right , black , #000 10%, #000 90% , black);
+        -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), #000 3%, #000 90%, rgba(0, 0, 0, 0));
+        scroll-behavior: smooth;
+    }
+    
+    
+    .movie{
+        min-width: 150px;
+        margin-left: 20px;
+    }
+    
+    .movie img{
+        width: 100%;
+        border-radius: 30px;
+        transition: 0.3s ease, transform 0.2s ease;
+    } 
+    
+    .movie img:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    
+   
+    
+    
+    .movies-list ::-webkit-scrollbar{
+        display: none;
+    }
+    
+    
+    .rank span{
+        position: relative;
+        top: 120px;
+        left: -80px;
+        -webkit-text-stroke: 0.125rem rgb(255, 255, 255);
+        text-shadow: 0 0 20px rgb(0, 0, 0);
+        font-weight: 900;
+        z-index: 100;
+        font-size: 50px;
+        color: rgb(0, 0, 0);
+        transition: transform 0.3s;
+    }
+    
+    .btmtext{
+        padding: 0px;
+        margin-top: -10px;
+    }
+    
+    .r-list{
+        position: relative;
+        margin-top: -17vh;
+        height: 60vh;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        
+    }
+    
+    .reason{
+        position: relative;
+        font-weight: 600;
+        padding: 13px;
+        border-radius: 15px;
+        font-size: clamp(1rem, 1.2vw, 3rem);
+        font-family: var(--main-font-family);
+        background-color: rgba(92, 89, 89, 0.446);
+        filter: blur(0.9);
+        height: 20vh;
+        width: 20vw;
+        margin-left: 20px;
+        color: white;
+        border: 2px solid rgba(176, 170, 170, 0.155);
+    }
+    
+    
+    
+    .reason img{    
+        width: 50px;
+    }
+    
+    #stk1{
+        position: relative;
+        margin-left: 16vw;
+        top: 10vh;
+    }
+    #stk2{
+        position: relative;
+        margin-left: 16vw;
+        top: 10vh;
+    }
+    #stk3{
+        position: relative;
+        margin-left: 16vw;
+        top: 10vh;
+    }
+    #stk4{
+        position: relative;
+        margin-left: 16vw;
+        top: 10vh;
+    }
+        
+    .foot{
+        display: grid;
+        grid-template-columns: 20vw 20vw 20vw 20vw;
+        margin-top: 10vh;
+        margin-left: 16vw;
+        font-size: 14px;
+        font-family: var(--main-font-family);
+        font-weight: 50;
+       
+    }
+    
+    
+    footer h3{
+        color: white;
+        font-family: var(--main-font-family);
+        margin-left: 10vw;
+    }
+    
+    
+    .que{
+        margin-bottom: 2vh;
+        cursor: pointer;
+        color: #ffffff;
+    }
+    
+    .que a{
+        color: rgb(180, 175, 175);
+    }
+    
+    h3 a{
+        color: #ffffff;
+    }
+
+    
+    @media (max-width : 1280px){
+        
+        .lang{
+            margin-right: 2rem;
+        }
+        .reason{
+          height: 15vh;
+          width: 20vw;
+          font-size: 14px;
+          font-weight: 500;
+          margin: 1px;
+          
+        }
+        
+        .foot{
+            grid-template-columns: 20vw 20vw 20vw;
+            margin-left: 27vw;
+                    
+        }
+        
+        #stk1,#stk2,#stk3,#stk4{
+            top: 5vh;
+            margin-left: 15vw;
+        }
+     
+        .movie img:hover {
+            transform: scale(1.1);
+        }
+        
+    }
+    
+    
+    @media (max-width : 1100px)
+    {
+        .lang{
+            right: 90px;
+            width: auto;
+            padding: 5px 8px;
+            gap: 3vw;
+        }
+        
+        .sign{
+            margin-left: 1vw;
+        }
+        
+    }
+    
+    
+    @media (max-width : 996px){
+
+       .r-list{
+        margin-top: 25vh;   
+        display: flex;
+        flex-direction: column;
+       }
+       
+       .reason{
+        width: 80vw;
+        top: -12vh;
+        margin: auto 5vw;
+        font-size: 20px;
+       }
+       
+       #stk1,#stk2,#stk3,#stk4{
+        top: 4vh;
+        margin-left: 90%;
+    }
+    
+    footer h3{
+        margin-top: 8vh;
+    }
+    
+    .foot{
+        grid-template-columns: 20vw 20vw;
+        margin-left: 27vw;
+        gap: 0 15vw;
+    }
+    
+    
+       
+    }
+    
+    
+    @media (max-width : 960px) {
+        
+    
+        
+        nav img{
+            display: none;
+        }
+        
+        .s1{
+             
+            font-size: clamp(2rem, 4vh, 4rem);
+        }
+        
+        .s3{
+            top: 70%;
+        }
+        
+        .net{
+            
+            display: block;
+            
+        }
+        
+        .sign{
+            display: block;
+        }
+    }
+    
+    
+    
+        
+        
+    
+    
+    
+    @media (max-width: 768px) {
+        
+        main {
+            top: 4.5vh;
+            margin-left: 5vw;     /* Increase left margin */
+            margin-right: auto;   /* Keep right side auto-adjusted */
+            width: 90vw;          /* Adjust width to compensate */
+        }
+        
+        
+        #signin , #btn{
+            width: 45%;
+            margin-bottom: -2%;
+            left: 10px;
+        }
+        
+        .s1{
+            font-size: clamp(1.8rem, 3.5vh, 3.5rem);
+            top: 46%;
+           
+        }
+        .s2 {
+            top: 60%; /* Moves it slightly higher */
+            width: 70vw;
+            font-size: clamp(1rem, 1.5vw, 3rem); /* Adjusts for mobile */
+        }
+        
+        .s3{
+            width: 90%;
+            font-size: clamp(0.9rem , 1.8vw , 3rem) ;
+            top: 70%;
+        }
+        
+        h2{
+            padding: 15px;
+            margin: 0;
+             margin-bottom: 15px;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+           
+        }
+    }
+        
+    
+    @media (max-width: 600px) {
+        form {
+            flex-direction: column; /* Stacks input and button */
+            align-items: center; /* Centers them */
+        }
+        
+        .s1{
+            font-size: clamp(1.5rem , 3vh, 3rem);
+            width: 80vw;
+            top: 25%;
+            font-weight: 600;
+        }
+        
+        .s2{
+            top: 38%;
+        }
+        
+        .s3{
+            top: 50%;
+        }
+    
+        #signin, #btn {
+            
+            width: 90%; /* Uses most of the screen width */
+            max-width: 300px; /* Prevents it from being too wide */
+            margin: 1px;
+        }
+        
+        
+        .eng{
+            display: none;
+        }
+        
+        
+        .sign{
+            display: block ;
+        }
+        
+        h2{
+            font-size: clamp(1rem , 5vw , 3rem);
+        }
+        
+        .foot{
+            grid-template-columns: 20vw;
+            margin-left: 10vw;
+        }
+        
+    }
+    
+    @media (max-width: 480px) {
+        
+        
+        
+        .s1 {
+            top: 20%; /* Adjusted for very small screens */
+            font-size: clamp(1.2rem, 2.3vh, 2.5rem);
+            width: 60vw;
+        }
+        
+        .s2{
+            top: 35%;
+            width: 70%;
+        }
+            
+        .s3{
+            top: 50%;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+           
+        }
+        
+        .sec1 {
+            top: 35%; /* Adjusted for very small screens */
+            font-size: auto
+        }
+        
+        main {
+            margin-left: 7.5vw;     /* Even more left margin for very small screens */
+            width: 84vw;          /* Further reduce width to compensate */
+        }
+        
+        nav img {
+            height: 4.5vh; /* Even smaller for very small screens */
+            width: 90%; /* More cropping on very small screens */
+            margin-left: 4vw; /* Adjust left margin if needed */
+            object-fit: cover; /* This maintains aspect ratio while cropping */
+            object-position: left;
+        }
+        
+        
+        h2{
+            width: auto;
+            font-size: large;
+         
+        
+
+            
+        }
+        
+        #stk1,#stk2,#stk3,#stk4{
+            top: 4vh;
+            margin-left: 85%;
+        }
+        
+        .ptag{
+            font-size: 15px;
+        }
+       
+    }
+    
+  
+    
+
+ 
